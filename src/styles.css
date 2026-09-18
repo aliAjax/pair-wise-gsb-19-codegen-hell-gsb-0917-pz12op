@@ -271,3 +271,319 @@ input {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- 记录器扩展样式 ---------- */
+
+select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0 12px;
+  color: #172033;
+  background: #ffffff;
+  font: inherit;
+}
+
+.chip-active {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: #ffffff !important;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sev-ok {
+  color: #15803d;
+  background: #dcfce7;
+  border: 1px solid #86efac;
+}
+
+.sev-watch {
+  color: #b45309;
+  background: #fef3c7;
+  border: 1px solid #fcd34d;
+}
+
+.sev-danger {
+  color: #be123c;
+  background: #ffe4e6;
+  border: 1px solid #fda4af;
+}
+
+.tank-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.tank-card {
+  padding: 22px;
+}
+
+.tank-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.tank-head h3 {
+  margin-bottom: 4px;
+  font-size: 19px;
+}
+
+.tank-type {
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.alert-banner {
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  color: #be123c;
+  background: #ffe4e6;
+  border: 1px solid #fda4af;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.metric-readouts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 0 0 14px;
+}
+
+.readout {
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  background: #fbfdff;
+}
+
+.readout dt {
+  color: #64748b;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.readout dd {
+  margin: 0;
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.readout.sev-ok { border-left: 4px solid var(--accent); }
+.readout.sev-watch { border-left: 4px solid var(--warn); }
+.readout.sev-danger { border-left: 4px solid #e11d48; }
+
+.change-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  font-size: 13px;
+  color: #526070;
+}
+
+.change-line strong {
+  font-size: 13px;
+}
+
+.days-ok {
+  color: #15803d;
+}
+
+.days-overdue {
+  color: #be123c;
+}
+
+.record-form {
+  display: grid;
+  gap: 14px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.form-field {
+  display: grid;
+  gap: 8px;
+}
+
+.form-field-wide {
+  grid-column: span 3;
+}
+
+.kind-toggle {
+  display: flex;
+  gap: 8px;
+}
+
+.kind-toggle button {
+  flex: 1;
+}
+
+.form-error {
+  color: #be123c;
+  background: #ffe4e6;
+  border: 1px solid #fda4af;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 0;
+  font-size: 13px;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.form-hint {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.add-tank {
+  display: grid;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--border);
+}
+
+.add-tank h2 {
+  font-size: 17px;
+  margin-bottom: 0;
+}
+
+.empty-hint {
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+/* 历史记录：序号 / 内容 / 撤销 三列 */
+.record-list .record-card {
+  grid-template-columns: 48px 1fr auto;
+  gap: 14px;
+  align-items: center;
+}
+
+.record-index {
+  width: 42px;
+  height: 42px;
+  font-size: 14px;
+}
+
+.record-index-change {
+  background: var(--accent);
+}
+
+.record-body h3 {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.record-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.record-kind {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.record-time {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.record-card p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.value-chip {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.record-note {
+  color: #526070;
+  font-size: 13px;
+}
+
+.undo-btn {
+  min-height: 34px;
+  color: #be123c;
+  border-color: #fda4af;
+}
+
+.undo-btn:hover {
+  background: #ffe4e6;
+}
+
+@media (max-width: 980px) {
+  .tank-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-field-wide {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-readouts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .record-list .record-card {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .undo-btn {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
